@@ -8,8 +8,8 @@
 }
 
 body {
-    background: #2a0134;
     color: #ededed;
+    background-color: #320643;
 }
 
 .header{
@@ -27,10 +27,35 @@ body {
 
 .header .logo {
     font-size: 50px;
+    position: relative;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
     margin: 35px;
+}
+
+.header .logo::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.header .navbar::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
 }
 
 .header .navbar a {
@@ -40,6 +65,7 @@ body {
     font-weight: 500;
     margin-right: 100px;
 }
+
 
 .header .navbar a:hover,
 .header .navbar a.active {
@@ -74,6 +100,19 @@ body {
     font-weight: 700;
     line-height: 1.1;
 }
+
+.home .home-content h1::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+}
+
 
 .home .home-content h3 {
     font-size: 32px;
@@ -124,12 +163,35 @@ body {
     animation: fadeInOut 3s infinite;
 }
 
+.home .home-content .developer-container::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+}
+
+
 .container .hex-container{
     position: relative;
     width: 80%;
     height: 300px;
     margin-top: -325px;
     z-index: 2;
+    animation: fadeIn 7.5s;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 1; 
+    }
 }
 
 .container .hex-container::before {
@@ -183,7 +245,7 @@ body {
     padding: 20px;
     text-align: center;
     background: rgba(250, 250, 250, 0.5);
-    color: #2a0134;
+    color: #320643;
     opacity: 0;
     transition: 0.5s;
 }
@@ -204,8 +266,8 @@ body {
     margin-top: 5%;
     display: inline-flex;
     align-items: center;
-    background: #2a0134;
-    border: 2px solid #2a0134;
+    background: #320643;
+    border: 2px solid #320643;
     border-radius: 8px;
     font-size: 19px;
     font-weight: 600;
@@ -215,13 +277,33 @@ body {
 }
 
 .hex-background .hex-content .button-container a {
-    color: #2a0134;
+    color: #320643;
     text-align: center;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
+
+.hex-background .hex-content .button-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #af69ef;
+    z-index: -1;
+    overflow: hidden;
+    transition: 0.5s; 
+}
+
+.hex-background .hex-content .button-container a:hover::before {
+    width: 100%;
+}
 /*make button transition*/
 
 @media (max-width: 1050px) {
@@ -274,13 +356,26 @@ body {
     100% { opacity: 0; }
 }
 
-/*fix button styles >:(*/
 .home-content .button-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     width: 345px;
     height: 50px;
 } 
+
+.home-content .button-container::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: 0.4s;
+    z-index: 2;
+}
 
 .home-content .button-container a {
     position: relative;
@@ -293,7 +388,7 @@ body {
     border: 2px solid #efefef;
     border-radius: 8px;
     font-size: 19px;
-    color: #2a0134;
+    color: #320643;
     text-decoration: none;
     letter-spacing: 1px;
     font-weight: 600;
@@ -310,7 +405,7 @@ body {
 }
 
 .home-content .button-container a:nth-child(2):hover {
-    color: #2a0134;
+    color: #320643;
 }
 
 .home-content .button-container a::before {
@@ -356,7 +451,7 @@ body {
 }
 
 .container .home .icon-container a:hover {
-    color: #2a0134;
+    color: #320643;
 }
 
 .container .home .icon-container a::before {
@@ -375,3 +470,14 @@ body {
     width: 100%;
 }
 
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+@keyframes reveal {
+    100% {
+        width: 100%;
+    }
+}
