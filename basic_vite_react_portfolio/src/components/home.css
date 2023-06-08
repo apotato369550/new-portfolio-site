@@ -1,0 +1,217 @@
+.home, .hex-container {
+    flex: 1;
+    align-items: center;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home .home-content {
+    background: none;
+    max-width: 600px;
+}
+
+.home .home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.home .home-content h1::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+}
+
+
+.home .home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #efefef;
+}
+
+.home .home-content p {
+    font-size: 16px;
+    margin: 20px 0 20px;
+}
+
+.home .home-content .name-container, 
+.home .home-content .developer-container {
+    flex: 1;
+    align-items: center;
+}
+
+.home .home-content .name-container {
+    margin-top: 5%;
+    line-height: 1.65; /* Adjust the line height as desired */
+}
+
+.home-content .name-container .name-item{
+    display: inline-block;
+    font-size: 32px;
+    margin-left: 25px; /* Adjust the margin between words as desired */
+}
+
+.home-content .name-container .name-capital {
+    font-size: 56px;
+    color: #af69ef;
+    font-weight: 700; /* Adjust the font size of the capital letters */
+}
+
+.home .home-content .developer-container h3 {
+    text-align: center;
+}
+
+.home .home-content .developer-container {
+    position: relative;
+    width: 300px;
+}
+
+.home-content .developer-container .developer-logo {
+    height: 300px;
+    position: relative;
+    animation: fadeInOut 3s infinite;
+}
+
+.home .home-content .developer-container::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+}
+
+
+.home-content .button-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+} 
+
+.home-content .button-container::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #320643;
+    animation: showRight 2s ease forwards;
+    animation-delay: 0.4s;
+    z-index: 2;
+}
+
+.home-content .button-container a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+    background: #efefef;
+    border: 2px solid #efefef;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #320643;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-right: 15px;
+    padding: 5px 10px;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.home-content .button-container a:nth-child(2) {
+    background: transparent;
+    color: #efefef;
+}
+
+.home-content .button-container a:nth-child(2):hover {
+    color: #320643;
+}
+
+.home-content .button-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #af69ef;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-content .button-container a:hover::before {
+    width: 100%;
+}
+
+
+.icon-container {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .icon-container a {
+    position: relative;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #efefef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #efefef;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home .icon-container a:hover {
+    color: #320643;
+}
+
+.home .icon-container a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #af69ef;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home .icon-container a:hover::before {
+    width: 100%;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
