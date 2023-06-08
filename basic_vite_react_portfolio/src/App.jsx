@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/header'
 import Home from './components/home'
+import Hex from './components/hex'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <div className='container'>
         <Home />
+        <Hex />
       </div>
     </>
   )

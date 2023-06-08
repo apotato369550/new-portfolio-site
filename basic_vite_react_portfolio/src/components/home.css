@@ -1,8 +1,3 @@
-.home, .hex-container {
-    flex: 1;
-    align-items: center;
-}
-
 .home {
     height: 100vh;
     display: flex;
