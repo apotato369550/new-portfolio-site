@@ -22,7 +22,8 @@
 }
 
 .nav-toggle .close {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .nav-checkbox {
@@ -39,7 +40,7 @@
 
 .nav-menu li {
     list-style: none;
-    display: none
+    display: none;
 }
 
 .nav-menu .logo {
@@ -50,28 +51,41 @@
 }
 
 .nav-menu a {
+    position: relative;
     text-decoration: none;
     font-size: 1.2em;
     color: inherit;
 }
+
 
 #nav-checkbox:checked ~ .nav-menu li {
     display: block;
 }
 
 #nav-checkbox:checked ~ .nav-toggle .close {
-    display: block;
+    opacity: 1;
 }
 
 #nav-checkbox:checked ~ .nav-toggle .hamburger {
-    display: none;
+    opacity: 0;
 }
 
-.nav a:hover {
-    animation: showUnderline 0.25s linear forwards;
+.nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #efefef;
+    transition: width 0.25s linear;
+}
+  
+.nav a:hover::after {
+    width: 100%;
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 780px) {
     .nav .nav-toggle {
         display: none;
     }
@@ -79,21 +93,15 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        text-align: right;
+        width: 75%;
     }
     .nav li {
         display: block;
-    }
-    .nav a {
         font-size: 1.25em;
-        margin: 0em 0.5em;
     }
     .nav .logo { 
         font-size: 3em;
-    }
-}
-
-@keyframes showUnderline {
-    100% {
-        border-bottom: solid #efefef;
+        margin-right: 3em;
     }
 }
