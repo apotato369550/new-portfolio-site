@@ -1,0 +1,80 @@
+.contact-form {
+    background-color: #efefef;
+    color: #491460;
+    padding: 5vh 10vw;
+    width: 80vw;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+}
+
+.contact-form p {
+    font-size: 0.8em;
+    margin-bottom: 1em;
+}
+
+.contact-form form {
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form .user-info,
+.contact-form .user-message,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 1em;
+}
+.contact-form .user-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.contact-form .user-info input {
+    flex: 1;
+    padding: 0.5em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form .user-message textarea {
+    padding: 0.5em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    flex: 1;
+}
+.contact-form button {
+    color: #491460;
+    background-color: #efefef;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #dcdcdc;
+}
+  
+@media only screen and (min-width: 780px) {
+    .contact-form {
+        flex: 1;
+        row-gap: 10vh;
+        margin: 5vh 5vw;
+        width: 40vh;
+        max-height: 70vh;
+        padding: 5vh 5vw;
+    }
+}
