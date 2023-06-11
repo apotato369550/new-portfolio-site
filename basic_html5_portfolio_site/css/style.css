@@ -469,7 +469,7 @@ body {
 .container .home .icon-container a:hover::before {
     width: 100%;
 }
-
+/*fix height*/
 
 @keyframes showRight {
     100% {
