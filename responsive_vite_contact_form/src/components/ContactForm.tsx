@@ -1,9 +1,11 @@
 import './css/ContactForm.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
 function ContactForm() {
     return (
         <section className="contact-form">
-            <h2>Contact Me!</h2>
+            <h1>Contact Me!</h1>
             <p>Feel free to get in touch with me using the form below or through the provided contact information.</p>
             
             <form>
@@ -15,8 +17,18 @@ function ContactForm() {
                 <div className="user-message">
                     <textarea id="message" name="message" rows={5} required  placeholder="Your message here..." ></textarea>
                 </div>
-                
+
                 <button type="submit">Send Message</button>
+
+                <div className="contact-info">
+                    <h2>Other Contact Information</h2>
+                    <ul>
+                        <li><FontAwesomeIcon icon={faEnvelope} /> email@example.com</li>
+                        <li><FontAwesomeIcon icon={faPhone} /> 123-456-7890</li>
+                        <li><FontAwesomeIcon icon={faMapMarker} /> City, State, Country</li>
+                        
+                    </ul>
+                </div>
             </form>
         </section>
     )
