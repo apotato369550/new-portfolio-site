@@ -29,6 +29,15 @@
           margin-bottom: 8px;
           font-weight: bold;
         }
+
+        .container .alert {
+          border: solid #45a049;
+          background-color: #99fc9e;
+          text-align: center;
+          padding: 1em;
+          border-radius: 8px;
+          display: none;
+        }
     
         .container input[type="text"],
         .container input[type="email"],
@@ -58,7 +67,8 @@
 <body>
     <div class="container">
         <h2>Contact Form</h2>
-        <form>
+        <form id="contact-form">
+          <p class="alert">Your message has been sent!</p>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Your name" required>
     
@@ -70,6 +80,8 @@
     
           <input type="submit" value="Submit">
         </form>
-      </div>    
+      </div> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="./mail.js"></script>
 </body>
 </html>
