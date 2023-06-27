@@ -40,6 +40,14 @@
     margin-bottom: 1em;
 }
 
+.alert {
+    border: solid #45a049;
+    background-color: #99fc9e;
+    text-align: center;
+    padding: 1em;
+    border-radius: 8px;
+  }
+
 .contact-form form {
     border-radius: 20px;
     margin: auto;

@@ -1,31 +1,81 @@
 import './css/ContactForm.css'
-import { useRef } from 'react'
+import { push, set, DatabaseReference } from 'firebase/database'
+import { contactFormDatabase } from '../config/firebase'
+import { ChangeEvent, useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
 function ContactForm() {
-    const contactFormRef = useRef<HTMLFormElement>(null);
-    const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
-        console.log("Submit button clicked!")
+    const [ name, setName ] = useState("");
+    const [ email, setEmail ] = useState("");
+    const [ message, setMessage ] = useState("");
+    const [ alert, setAlert ] = useState(false);
 
+    const handleNameChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
     }
 
+    const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    }
+
+    const handleMessageChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(event.target.value);
+    }
+
+
+    const submitContactForm = (event:any) => {
+        event.preventDefault();
+
+        console.log(name, email, message);
+        saveMessages(name, email, message);
+        clearFields();
+
+        // alert here...
+        /*
+        setTimeout(() => {
+            document.querySelector(".alert").style.display = "none";
+        }, 3000)
+        */ 
+
+        setAlert(true);
+        setTimeout(() => {
+            setAlert(false);
+        }, 3000);
+    }
+
+    const saveMessages = (name: string, email: string, message: string) => {
+        let newContactForm: DatabaseReference = push(contactFormDatabase);
+
+        set(newContactForm, {
+            name: name,
+            email: email,
+            message: message
+        })
+    }
+
+    const clearFields = () => {
+        setName("");
+        setEmail("");
+        setMessage("");
+    }
     return (
         <section className="contact-form">
             <h1>Contact Me!</h1>
             <p>Feel free to get in touch with me using the form below or through the provided contact information.</p>
-            
+            <p className="alert" style={{ display: alert ? 'block' : 'none' }}>Your message has been sent!</p>
+
             <form id="contact-form">
                 <div className="user-info">
-                    <input type="text" id="name" name="name" placeholder="Your Name Here" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email Here"  required />
+                    <input type="text" id="name" name="name" placeholder="Your Name Here" value={name} onChange={handleNameChange} required />
+                    <input type="email" id="email" name="email" placeholder="Your Email Here" value={email} onChange={handleEmailChange} required />
                 </div>
                 
                 <div className="user-message">
-                    <textarea id="message" name="message" rows={5} required  placeholder="Your message here..."></textarea>
+                    <textarea id="message" name="message" rows={5} required  placeholder="Your message here..." value={message} onChange={handleMessageChange}></textarea>
                 </div>
 
-                <button type="submit" onClick={handleSubmit}>Send Message</button>
+                <button type="submit" onClick={submitContactForm}>Send Message</button>
 
                 <div className="contact-info">
                     <h2>Other Contact Information</h2>
