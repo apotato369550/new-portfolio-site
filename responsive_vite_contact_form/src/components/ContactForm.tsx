@@ -1,11 +1,13 @@
 import './css/ContactForm.css'
+import emailjs from '@emailjs/browser';
 import { push, set, DatabaseReference } from 'firebase/database'
 import { contactFormDatabase } from '../config/firebase'
-import { ChangeEvent, useState, useEffect } from 'react'
+import { ChangeEvent, useState, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
 function ContactForm() {
+    const form = useRef<HTMLFormElement | null>(null);
     const [ name, setName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ message, setMessage ] = useState("");
@@ -31,12 +33,15 @@ function ContactForm() {
         saveMessages(name, email, message);
         clearFields();
 
-        // alert here...
-        /*
-        setTimeout(() => {
-            document.querySelector(".alert").style.display = "none";
-        }, 3000)
-        */ 
+        // just need to test it
+        if (form.current) {
+            emailjs.sendForm('service_koj1i0n', 'template_w5lnknx', form.current, 'ZyU2lX-2oXqVHSbz3')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        }
 
         setAlert(true);
         setTimeout(() => {
@@ -65,7 +70,7 @@ function ContactForm() {
             <p>Feel free to get in touch with me using the form below or through the provided contact information.</p>
             <p className="alert" style={{ display: alert ? 'block' : 'none' }}>Your message has been sent!</p>
 
-            <form id="contact-form">
+            <form ref={form} id="contact-form">
                 <div className="user-info">
                     <input type="text" id="name" name="name" placeholder="Your Name Here" value={name} onChange={handleNameChange} required />
                     <input type="email" id="email" name="email" placeholder="Your Email Here" value={email} onChange={handleEmailChange} required />
