@@ -9,6 +9,25 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>JAY</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyCoAiGwO--zcxdOB5YLwgGF8yBBH8MNB38",
+        authDomain: "portfolio-contact-form-a14bc.firebaseapp.com",
+        projectId: "portfolio-contact-form-a14bc",
+        storageBucket: "portfolio-contact-form-a14bc.appspot.com",
+        messagingSenderId: "518913668704",
+        appId: "1:518913668704:web:f14c17cab24d942e0fb505",
+        measurementId: "G-86GEWEGY6Z"
+      };
+      
+      // initialize firebase
+      firebase.initializeApp(firebaseConfig)
+
+      // reference database
+      const contactFormDatabase = firebase.database().ref("sample-contact-form")
+
+    </script>
   </head>
   <body>
     <div id="root"></div>

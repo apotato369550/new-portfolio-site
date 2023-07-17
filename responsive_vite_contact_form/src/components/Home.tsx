@@ -1,25 +1,34 @@
 import './css/Home.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function Home() {
     return (
         <section className="home">
-            <h1>Hi! I'm</h1>
+            <h1>Hi! I'm...</h1>
             <div className="name-container">
-                <span className="name-item"><h1>J</h1>ohn <h1>A</h1>ndre <h1>Y</h1>Yap</span>
+                <h1><u>J</u>ohn <u>A</u>ndre</h1> 
+                <h1><u>Y</u>ap</h1>
             </div>
-            <h3>Software Engineer</h3>
+            <h2>Software Engineer</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi ipsam exercitationem iure incidunt architecto, et hic quam nesciunt perspiciatis, quidem dolores molestiae. Iste ratione magni necessitatibus. Ab, rem rerum.</p>
             
-            <div className="button-container">
-                <button><a href="#">About Me</a></button>
-                <button><a href="#">Projects</a></button>
-            </div>
+            <div className='user-interactables-container'>
+                <div className="button-container">
+                    <a href="#">About Me</a>
+                    <a href="#">Projects</a>
+                </div>
 
-            <div className="icon-container">
-                <a href="#"><i className='bx bxl-github'></i></a>
-                <a href="#"><i className='bx bxl-facebook-circle'></i></a>
-                <a href="#"><i className='bx bxl-linkedin'></i></a>
+                <div className="socials-icon-container">
+                    <h2>My Socials</h2>
+                    <ul>
+                        <li><a href="#"><FontAwesomeIcon icon={faGithub} size="2x" /></a></li>
+                        <li><a href="#"><FontAwesomeIcon icon={faFacebook} size="2x" /></a></li>
+                        <li><a href="#"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a></li>
+                    </ul>
+                </div>
             </div>
+            
         </section>
     )
 }
