@@ -48,6 +48,18 @@
             font-size: 1em;
             color: inherit;
 
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: #290b36;
+                animation: showRight .5s ease forwards;
+                animation-delay: .5s;
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -100,11 +112,22 @@
                 font-size: 1em;
             }
 
+            a::before {
+                animation: showRight 1s ease forwards;
+                animation-delay: 1s;
+            }
+
+
             .logo {
                 font-size: 3em;
                 margin-right: 3em;
                 margin-left: 3rem;
             }
+        }
+            
+        .nav-menu a::before {
+            animation: showRight 1s ease forwards;
+            animation-delay: 1s;
         }
     }
 }

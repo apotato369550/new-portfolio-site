@@ -4,7 +4,8 @@ import kute from 'kute.js'
 
 function Blob() {
     useEffect(() => {
-        // do kute stuff here
+        // turn this into a button
+        /*
         const tween = kute.fromTo(
             '#blob-1',
             { path: '#blob-1' },
@@ -20,7 +21,7 @@ function Blob() {
             { repeat: 999, duration: 3000, yoyo: true }
         )
         tween2.start()
-
+        */
     }, [])
     return (
         <section className="blob">
