@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import AboutMe from './components/AboutMe'
 import MyProjects from './components/MyProjects'
 import ContactPage from './components/ContactMe'
+import Blob from './components/Blob'
 
 function App() {
 
@@ -12,11 +13,20 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={ <Home /> }/>
+        <Route path="/" element={ 
+        <>
+          <div className='container'>
+            <Home />
+            <Blob />
+          </div>
+        </> 
+        }
+        />
         <Route path="/about-me" element={ <AboutMe /> }/>
         <Route path="/projects" element={ <MyProjects /> }/>
         <Route path="/contact-me" element={ <ContactPage /> }/>
       </Routes>
+      
     </>
   )
 }

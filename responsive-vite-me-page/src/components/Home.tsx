@@ -1,6 +1,7 @@
-import './css/Home.css'
+import './scss/Home.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 
 function Home() {
     return (
@@ -28,7 +29,6 @@ function Home() {
                     </ul>
                 </div>
             </div>
-            
         </section>
     )
 }

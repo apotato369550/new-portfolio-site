@@ -60,7 +60,7 @@
 }
 
 #nav-checkbox:checked ~ .nav-toggle .close {
-opacity: 1;
+    opacity: 1;
 }
 
 #nav-checkbox:checked ~ .nav-toggle .hamburger {

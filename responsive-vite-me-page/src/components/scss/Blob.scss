@@ -1,0 +1,17 @@
+.blob {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 150px;
+    padding: 50px 5vw;
+    .flip {
+        transform: rotate(180deg);
+    }
+
+    @media only screen and (min-width: 780px) {
+        width: 50vw;
+        padding: 3vh 3vw;
+    }
+}
+
