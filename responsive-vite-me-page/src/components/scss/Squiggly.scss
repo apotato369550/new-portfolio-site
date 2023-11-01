@@ -1,4 +1,4 @@
-.blob {
+.squiggly {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,27 +11,27 @@
     }
 
 
+    animation-name: slideInLeft;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+
     @media only screen and (min-width: 780px) {
         width: 50vw;
         padding: 3vh 3vw;
     }
 
-    
-    animation-name: slideInRight;
-    animation-duration: 0.75s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    
-    @keyframes slideInRight {
+
+    @keyframes SlideInLeft {
         0% {
-        transform: translateX(100%);
-        opacity: 0;
+            transform: translateX(-100%);
+            opacity: 0;
         }
+
         100% {
-        transform: translateX(0);
-        opacity: 1;
+            transform: translateX(0);
+            opacity: 1;
         }
     }
 }
-
