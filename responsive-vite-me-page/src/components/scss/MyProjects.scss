@@ -1,12 +1,14 @@
 .my-projects {
-    background-color: #691D8A;
-    color: #efefef;
+    background-color: #efefef;
+    color: #491460;
     padding: 5vh 10vw;
     width: 80vw;
     border-radius: 20px;
     margin: auto;
     margin-bottom: 5vh;
     position: relative;
+    text-align: center;
+
   
     
     @media only screen and (min-width: 850px) {
@@ -17,6 +19,16 @@
         padding: 3vh 3vw;
     }
     
+    @media (max-height: 800px) {
+        h1 {
+            font-size: 1.75em;
+        }
+
+        h2 {
+            font-size: 1.25em;
+        }
+    }
+
     
     animation-name: slideInLeft;
     animation-duration: 0.75s;

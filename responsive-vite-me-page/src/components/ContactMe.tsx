@@ -85,9 +85,9 @@ function ContactMe() {
                 <div className="contact-info">
                     <h2>Other Contact Information</h2>
                     <ul>
-                        <li><FontAwesomeIcon icon={faEnvelope} /> email@example.com</li>
-                        <li><FontAwesomeIcon icon={faPhone} /> 123-456-7890</li>
-                        <li><FontAwesomeIcon icon={faMapMarker} /> City, State, Country</li>
+                        <li><FontAwesomeIcon icon={faEnvelope} /> johnandresyap510@gmail.com</li>
+                        <li><FontAwesomeIcon icon={faPhone} /> (0915) 044 3019</li>
+                        <li><FontAwesomeIcon icon={faMapMarker} /> Cebu City, Cebu, Philippines</li>
                         
                     </ul>
                 </div>

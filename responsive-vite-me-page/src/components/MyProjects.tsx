@@ -1,18 +1,18 @@
 import './scss/MyProjects.scss'
-
+import githubLogo from '../assets/githubLogo.svg'
 function MyProjects() {
     return (
         <section className="my-projects">
-            <p>My projects</p>
+            <h1>Check out my projects on Github! </h1>
 
             
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aspernatur cum deserunt maxime explicabo ad distinctio molestias, reprehenderit earum inventore deleniti, odio, vel voluptas necessitatibus officia non accusantium natus laudantium!</p>
-            
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aspernatur cum deserunt maxime explicabo ad distinctio molestias, reprehenderit earum inventore deleniti, odio, vel voluptas necessitatibus officia non accusantium natus laudantium!</p>
-            
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aspernatur cum deserunt maxime explicabo ad distinctio molestias, reprehenderit earum inventore deleniti, odio, vel voluptas necessitatibus officia non accusantium natus laudantium!</p>
-            
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis aspernatur cum deserunt maxime explicabo ad distinctio molestias, reprehenderit earum inventore deleniti, odio, vel voluptas necessitatibus officia non accusantium natus laudantium!</p>
+            <img src={githubLogo} alt="github logo" className="github-logo"/>
+
+            <ul>
+                <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
+                <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
+                <li><a href="https://github.com/yourusername/project3">Project 3</a></li>
+            </ul>
         </section>
     )
 }

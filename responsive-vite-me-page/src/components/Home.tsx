@@ -12,20 +12,20 @@ function Home() {
                 <h1><u>Y</u>ap</h1>
             </div>
             <h2>Software Engineer</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi ipsam exercitationem iure incidunt architecto, et hic quam nesciunt perspiciatis, quidem dolores molestiae. Iste ratione magni necessitatibus. Ab, rem rerum.</p>
+            <p>I'd love to get to know you more; and I'm so excited to show you what I'm made of. Feel free to have a look around as I show you what I have to offer!</p>
             
             <div className='user-interactables-container'>
                 <div className="button-container">
-                    <a href="#">About Me</a>
-                    <a href="#">Projects</a>
+                    <a href="/about-me">About Me</a>
+                    <a href="/projects">Projects</a>
                 </div>
 
                 <div className="socials-icon-container">
                     <h2>My Socials</h2>
                     <ul>
-                        <li><a href="#"><FontAwesomeIcon icon={faGithub} size="2x" /></a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faFacebook} size="2x" /></a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faLinkedin} size="2x" /></a></li>
+                        <li><a href="https://github.com/apotato369550" target="_blank" ><FontAwesomeIcon icon={faGithub} size="2x" /></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100077675029874" target="_blank" ><FontAwesomeIcon icon={faFacebook} size="2x" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/john-andre-yap-6571a4200/" target="_blank" ><FontAwesomeIcon icon={faLinkedin} size="2x" /></a></li>
                     </ul>
                 </div>
             </div>
